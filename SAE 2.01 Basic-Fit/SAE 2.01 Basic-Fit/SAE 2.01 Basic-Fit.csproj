@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="Image\basic-fit-logo.png" />
+    <None Remove="Image\logobasicfiticon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +20,10 @@
 
   <ItemGroup>
     <Resource Include="Image\basic-fit-logo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\logobasicfiticon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 

@@ -5,15 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SAE_2._01_Basic_Fit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="600" Width="600"
+        Icon="Image/logobasicfiticon.ico" ResizeMode="NoResize">
     <Grid Background="#FFFF8C42">
         <StackPanel>
 
 
-            <Border BorderBrush="Black" BorderThickness="1" Height="510" Margin="0,30,0,570" Width="493" Background="White" CornerRadius="20,20,20,20" FlowDirection="RightToLeft">
+            <Border BorderThickness="1" Height="510" Margin="0,30,0,570" Width="493" Background="White" CornerRadius="20,20,20,20">
                 <StackPanel>
-                    <Image Height="105" Source="/Image/basic-fit-logo.png" Stretch="Fill" Width="385" Margin="0,12,0,0"/>
-                    <TextBlock Text="CONNEXION" FontSize="30" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+                    <Image Height="91" Source="/Image/basic-fit-logo.png" Stretch="Fill" Width="330" Margin="0,12,0,0"/>
+                    <TextBlock Text="CONNEXION" FontSize="30" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="0,35,0,0"/>
+                    <TextBlock Text="Nom d'utilisateur :" FontSize="15" FontWeight="Bold" Foreground="Black" Width="138" Margin="-286,35,0,0"/>
+                    <TextBox Width="426" Margin="0,25,0,0" Background="#FFD9D9D9" FontSize="16" FontWeight="DemiBold" Height="23" BorderBrush="#FFD9D9D9" />
+                    <TextBlock Text="Mot de passe :" FontSize="15" FontWeight="Bold" Foreground="Black" Width="138" Margin="-286,35,0,0"/>
+                    <PasswordBox Width="426" Margin="0,25,0,0" Background="#FFD9D9D9" FontSize="16" FontWeight="Bold" Height="23" BorderBrush="#FFD9D9D9" PasswordChar="●"/>
+                    <Button Content="SE CONNECTER" FontSize="15" FontWeight="Bold" Foreground="Black" Height="39" Width="175" Margin="0,40,0,0" Background="#FFFF8C42" BorderBrush="#FFFF8C42" />
                 </StackPanel>
             </Border>
 
