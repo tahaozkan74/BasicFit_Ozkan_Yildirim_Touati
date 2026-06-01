@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "P:\\S2\\SAE 2.01\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj": {}
+    "C:\\Users\\tozka\\Desktop\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj": {}
   },
   "projects": {
-    "P:\\S2\\SAE 2.01\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj": {
+    "C:\\Users\\tozka\\Desktop\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\S2\\SAE 2.01\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj",
+        "projectUniqueName": "C:\\Users\\tozka\\Desktop\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj",
         "projectName": "SAE 2.01 Basic-Fit",
-        "projectPath": "P:\\S2\\SAE 2.01\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj",
-        "packagesPath": "C:\\Users\\ozkant\\.nuget\\packages\\",
-        "outputPath": "P:\\S2\\SAE 2.01\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\obj\\",
+        "projectPath": "C:\\Users\\tozka\\Desktop\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit.csproj",
+        "packagesPath": "C:\\Users\\tozka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tozka\\Desktop\\Application\\SAE 2.01 Basic-Fit\\SAE 2.01 Basic-Fit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ozkant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tozka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -53,7 +52,7 @@
           "dependencies": {
             "Npgsql": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[10.0.3, )"
             }
           },
           "imports": [
@@ -67,6 +66,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.24, 8.0.24]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.24, 8.0.24]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.24, 8.0.24]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.24, 8.0.24]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -75,7 +92,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
