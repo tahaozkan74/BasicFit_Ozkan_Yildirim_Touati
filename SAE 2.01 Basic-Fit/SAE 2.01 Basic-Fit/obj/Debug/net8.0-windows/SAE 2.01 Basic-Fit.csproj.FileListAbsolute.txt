@@ -1,0 +1,27 @@
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.exe
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.deps.json
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.runtimeconfig.json
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.pdb
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\Npgsql.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.csproj.AssemblyReference.cache
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\MainWindow.g.cs
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\App.g.cs
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit_MarkupCompile.cache
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit_MarkupCompile.lref
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\MainWindow.baml
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.g.resources
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.GeneratedMSBuildEditorConfig.editorconfig
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.AssemblyInfoInputs.cache
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.AssemblyInfo.cs
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.csproj.CoreCompileInputs.cache
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.sourcelink.json
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01.C3AB3BDC.Up2Date
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\refint\SAE 2.01 Basic-Fit.dll
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.pdb
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.genruntimeconfig.cache
+P:\S2\SAE 2.01\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\ref\SAE 2.01 Basic-Fit.dll
