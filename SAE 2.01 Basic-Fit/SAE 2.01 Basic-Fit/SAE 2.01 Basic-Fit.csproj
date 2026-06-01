@@ -10,7 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\basic-fit-logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Npgsql" Version="10.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\basic-fit-logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

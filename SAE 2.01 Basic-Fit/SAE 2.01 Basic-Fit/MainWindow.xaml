@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SAE_2._01_Basic_Fit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
-    <Grid>
+        Title="MainWindow" Height="600" Width="600">
+    <Grid Background="#FFFF8C42">
+        <StackPanel>
 
+
+            <Border BorderBrush="Black" BorderThickness="1" Height="510" Margin="0,30,0,570" Width="493" Background="White" CornerRadius="20,20,20,20" FlowDirection="RightToLeft">
+                <StackPanel>
+                    <Image Height="105" Source="/Image/basic-fit-logo.png" Stretch="Fill" Width="385" Margin="0,12,0,0"/>
+                    <TextBlock Text="CONNEXION" FontSize="30" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+                </StackPanel>
+            </Border>
+
+
+
+        </StackPanel>
     </Grid>
 </Window>
