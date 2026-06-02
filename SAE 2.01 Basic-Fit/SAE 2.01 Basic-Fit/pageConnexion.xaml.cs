@@ -23,5 +23,14 @@ namespace SAE_2._01_Basic_Fit
         {
             InitializeComponent();
         }
+
+        private void butConnecter_Click(object sender, RoutedEventArgs e)
+        {
+            Employe.UCWindow.pagePrincipal pagePrincipal = new Employe.UCWindow.pagePrincipal();
+            this.Content = pagePrincipal;
+
+            Height = 750;
+            Width = 1250;
+        }
     }
 }

@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="Image\basic-fit-logo.png" />
     <None Remove="Image\logobasicfiticon.ico" />
+    <None Remove="Image\logOut.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +22,12 @@
   <ItemGroup>
     <Resource Include="Image\basic-fit-logo.png" />
     <Resource Include="Image\logobasicfiticon.ico" />
+    <Resource Include="Image\logOut.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Responsable\" />
+    <Folder Include="Employe\Window\" />
+    <Folder Include="Responsable\Window\" />
   </ItemGroup>
 
 </Project>
