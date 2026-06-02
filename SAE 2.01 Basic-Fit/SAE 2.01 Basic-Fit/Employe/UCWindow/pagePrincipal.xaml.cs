@@ -24,5 +24,10 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
         {
             InitializeComponent();
         }
+
+        private void butCoursJour_Click(object sender, RoutedEventArgs e)
+        {
+            ZoneContenu.Content = new pageCours();
+        }
     }
 }

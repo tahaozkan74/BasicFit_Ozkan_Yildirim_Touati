@@ -52,8 +52,6 @@ C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Deb
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\ref\SAE 2.01 Basic-Fit.dll
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\pageConnexion.g.cs
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\pageConnexion.baml
-C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\MainWindow.g.cs
-C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\MainWindow.baml
 P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.exe
 P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.deps.json
 P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\bin\Debug\net8.0-windows\SAE 2.01 Basic-Fit.runtimeconfig.json
@@ -87,3 +85,11 @@ P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\ne
 P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.pdb
 P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\SAE 2.01 Basic-Fit.genruntimeconfig.cache
 P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\ref\SAE 2.01 Basic-Fit.dll
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pagePrincipal.g.cs
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Responsable\UCWindow\pagePrincipal.g.cs
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pagePrincipal.baml
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Responsable\UCWindow\pagePrincipal.baml
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageCours.g.cs
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageCours.baml

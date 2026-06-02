@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\
 SAE_2._01_Basic_Fit
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-P:\Semestre 2\S2.01\Test xaml\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\App.xaml
-41076566885
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\App.xaml
+5-610335099
 
-20-1358125492
-201-1234280476
-Employe\UCWindow\pagePrincipal.xaml;MainWindow.xaml;pageConnexion.xaml;Responsable\UCWindow\pagePrincipal.xaml;
+21-786733437
+201-1761990673
+Employe\UCWindow\pageCours.xaml;Employe\UCWindow\pagePrincipal.xaml;MainWindow.xaml;pageConnexion.xaml;Responsable\UCWindow\pagePrincipal.xaml;
 
-True
+False
 
