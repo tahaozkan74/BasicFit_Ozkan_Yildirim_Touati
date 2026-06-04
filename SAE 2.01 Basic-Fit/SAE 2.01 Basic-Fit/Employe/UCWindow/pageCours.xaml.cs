@@ -1,4 +1,6 @@
-﻿using SAE_2._01_Basic_Fit.Models;
+﻿using SAE_2._01_Basic_Fit.Employe.Window;
+using SAE_2._01_Basic_Fit.Models;
+using SAE_2._01_Basic_Fit.Responsable.Window;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,12 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
         {
             InitializeComponent();
             dgCours.ItemsSource = new Seance().FindAll();
+        }
+
+        private void butDetailCours_Click(object sender, RoutedEventArgs e)
+        {
+            popupDetailCours popup = new popupDetailCours();
+            popup.ShowDialog();
         }
     }
 }

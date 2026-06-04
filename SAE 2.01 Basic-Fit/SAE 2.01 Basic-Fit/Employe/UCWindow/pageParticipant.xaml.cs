@@ -1,4 +1,5 @@
-﻿using SAE_2._01_Basic_Fit.Models;
+﻿using SAE_2._01_Basic_Fit.Employe.Window;
+using SAE_2._01_Basic_Fit.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,5 +55,13 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
         {
             CollectionViewSource.GetDefaultView(dgClient.ItemsSource).Refresh();
         }
+
+        private void butNouveauParticipant_Click(object sender, RoutedEventArgs e)
+        {
+            popupCreerParticipant popup = new popupCreerParticipant();
+            popup.ShowDialog();
+        }
+
+       
     }
 }

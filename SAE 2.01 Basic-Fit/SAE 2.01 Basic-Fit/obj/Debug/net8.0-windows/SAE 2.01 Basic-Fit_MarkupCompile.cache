@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\App.xaml
-10477269508
+18-1843069091
 
-24-51837378
+321104564736
 201-1761990673
-Employe\UCWindow\pageCours.xaml;Employe\UCWindow\pageParticipant.xaml;Employe\UCWindow\pagePrincipal.xaml;Employe\UCWindow\pageRechercheCours.xaml;MainWindow.xaml;pageConnexion.xaml;Responsable\UCWindow\pageCategorie.xaml;Responsable\UCWindow\pageGererCours.xaml;Responsable\UCWindow\pageGererSeance.xaml;Responsable\UCWindow\pagePrincipal.xaml;
+Employe\UCWindow\pageCours.xaml;Employe\UCWindow\pageParticipant.xaml;Employe\UCWindow\pagePrincipal.xaml;Employe\UCWindow\pageRechercheCours.xaml;Employe\Window\popupCreerParticipant.xaml;Employe\Window\popupDetailCours.xaml;MainWindow.xaml;pageConnexion.xaml;Responsable\UCWindow\pageCategorie.xaml;Responsable\UCWindow\pageGererCours.xaml;Responsable\UCWindow\pageGererSeance.xaml;Responsable\UCWindow\pagePrincipal.xaml;Responsable\Window\popupAjouterCategorie.xaml;Responsable\Window\popupAjouterCours.xaml;Responsable\Window\popupAjouterSeance.xaml;Responsable\Window\popupModifierCategorie.xaml;Responsable\Window\popupModifierCours.xaml;Responsable\Window\popupModifierSeance.xaml;
 
 False
 

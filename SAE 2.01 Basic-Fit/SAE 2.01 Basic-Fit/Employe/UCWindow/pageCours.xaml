@@ -55,7 +55,7 @@
                         <DataGridTemplateColumn Header="Statut" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Voir" Background="#FF4CAF50" Foreground="White" FontWeight="Bold" BorderThickness="0" Padding="15,5" Margin="5" Cursor="Hand"/>
+                                    <Button x:Name="butDetailCours" Content="Voir" Background="#FF4CAF50" Foreground="White" FontWeight="Bold" BorderThickness="0" Padding="15,5" Margin="5" Cursor="Hand" Click="butDetailCours_Click"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>

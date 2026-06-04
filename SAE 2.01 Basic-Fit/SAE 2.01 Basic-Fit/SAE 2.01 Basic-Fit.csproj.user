@@ -14,6 +14,12 @@
     <Compile Update="Employe\UCWindow\pageRechercheCours.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Employe\Window\popupCreerParticipant.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Employe\Window\popupDetailCours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="pageConnexion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +33,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Responsable\UCWindow\pagePrincipal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\Window\popupAjouterCategorie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\Window\popupAjouterCours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\Window\popupAjouterSeance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\Window\popupModifierCategorie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\Window\popupModifierCours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\Window\popupModifierSeance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

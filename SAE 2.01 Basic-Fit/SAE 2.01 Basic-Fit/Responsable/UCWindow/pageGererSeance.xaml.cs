@@ -1,4 +1,5 @@
 ﻿using SAE_2._01_Basic_Fit.Models;
+using SAE_2._01_Basic_Fit.Responsable.Window;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,18 @@ namespace SAE_2._01_Basic_Fit.Responsable.UCWindow
         {
             InitializeComponent();
             dgSeance.ItemsSource = new Seance().FindAllSeances();
+        }
+
+        private void butAjouterSeance_Click(object sender, RoutedEventArgs e)
+        {
+            popupAjouterSeance popup = new popupAjouterSeance();
+            popup.ShowDialog();
+        }
+
+        private void butModifier_Click(object sender, RoutedEventArgs e)
+        {
+            popupModifierSeance popup = new popupModifierSeance();
+            popup.ShowDialog();
         }
     }
 }

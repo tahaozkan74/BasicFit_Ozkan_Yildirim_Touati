@@ -10,17 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Employe\Window\**" />
-    <Compile Remove="Responsable\Window\**" />
-    <EmbeddedResource Remove="Employe\Window\**" />
-    <EmbeddedResource Remove="Responsable\Window\**" />
-    <None Remove="Employe\Window\**" />
-    <None Remove="Responsable\Window\**" />
-    <Page Remove="Employe\Window\**" />
-    <Page Remove="Responsable\Window\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Image\basic-fit-logo.png" />
     <None Remove="Image\logobasicfiticon.ico" />
     <None Remove="Image\logOut.png" />
