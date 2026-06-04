@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAE_2._01_Basic_Fit.Employe.UCWindow;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace SAE_2._01_Basic_Fit.Responsable.UCWindow
         public pagePrincipal()
         {
             InitializeComponent();
+        }
+
+        private void butGererCours_Click(object sender, RoutedEventArgs e)
+        {
+            ZoneContenu.Content = new pageGererCours();
+        }
+
+        private void butGererSeance_Click(object sender, RoutedEventArgs e)
+        {
+            ZoneContenu.Content = new pageGererSeance();
+        }
+
+        private void butCategorie_Click(object sender, RoutedEventArgs e)
+        {
+            ZoneContenu.Content = new pageCategorie();
         }
     }
 }

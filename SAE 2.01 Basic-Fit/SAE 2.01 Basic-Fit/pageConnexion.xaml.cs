@@ -26,7 +26,7 @@ namespace SAE_2._01_Basic_Fit
 
         private void butConnecter_Click(object sender, RoutedEventArgs e)
         {
-            Employe.UCWindow.pagePrincipal pagePrincipal = new Employe.UCWindow.pagePrincipal();
+            Responsable.UCWindow.pagePrincipal pagePrincipal = new Responsable.UCWindow.pagePrincipal();
             this.Content = pagePrincipal;
 
             Height = 750;

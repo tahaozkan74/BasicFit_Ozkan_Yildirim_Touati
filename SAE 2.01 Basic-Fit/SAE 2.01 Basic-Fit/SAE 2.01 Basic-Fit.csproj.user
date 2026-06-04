@@ -17,6 +17,15 @@
     <Compile Update="pageConnexion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Responsable\UCWindow\pageCategorie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\UCWindow\pageGererCours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Responsable\UCWindow\pageGererSeance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Responsable\UCWindow\pagePrincipal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -11,9 +11,13 @@
 
   <ItemGroup>
     <Compile Remove="Employe\Window\**" />
+    <Compile Remove="Responsable\Window\**" />
     <EmbeddedResource Remove="Employe\Window\**" />
+    <EmbeddedResource Remove="Responsable\Window\**" />
     <None Remove="Employe\Window\**" />
+    <None Remove="Responsable\Window\**" />
     <Page Remove="Employe\Window\**" />
+    <Page Remove="Responsable\Window\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,10 +34,6 @@
     <Resource Include="Image\basic-fit-logo.png" />
     <Resource Include="Image\logobasicfiticon.ico" />
     <Resource Include="Image\logOut.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Responsable\Window\" />
   </ItemGroup>
 
 </Project>
