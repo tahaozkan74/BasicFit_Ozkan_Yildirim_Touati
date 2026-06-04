@@ -98,5 +98,29 @@ namespace SAE_2._01_Basic_Fit.Models
             }
             return lesCours;
         }
+
+        public int Update()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand(
+                "update cours set categorie_id=@catId, cours_nom=@nom, cours_description=@desc where cours_id=@id;"))
+            {
+                cmd.Parameters.AddWithValue("catId", this.CategorieId);
+                cmd.Parameters.AddWithValue("nom", this.CoursNom);
+                cmd.Parameters.AddWithValue("desc", this.CoursDescription);
+                cmd.Parameters.AddWithValue("id", this.CoursId);
+                return DataAccess.ExecuteSet(cmd);
+            }
+        }
+
+        public int Create()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand("insert into cours (categorie_id, cours_nom, cours_description) values (@catId, @nom, @desc) returning cours_id;"))
+            {
+                cmd.Parameters.AddWithValue("catId", this.CategorieId);
+                cmd.Parameters.AddWithValue("nom", this.CoursNom);
+                cmd.Parameters.AddWithValue("desc", this.CoursDescription);
+                return Convert.ToInt32(DataAccess.ExecuteSelectUneValeur(cmd));
+            }
+        }
     }
 }

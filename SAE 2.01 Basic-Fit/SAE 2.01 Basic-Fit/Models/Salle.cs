@@ -15,6 +15,10 @@ namespace SAE_2._01_Basic_Fit.Models
         private string salleNom;
         private int salleNbPlaces;
 
+        public Salle()
+        {
+        }
+
         public Salle(int salleId, string salleNom, int salleNbPlaces)
         {
             SalleId = salleId;
@@ -47,7 +51,7 @@ namespace SAE_2._01_Basic_Fit.Models
                     lesSalles.Add(new Salle(
                     (int)dr["salle_id"],
                     (string)dr["salle_nom"],
-                    (int)dr["salle_nom_places"]));
+                    (int)dr["salle_nb_places"]));
             }
             return lesSalles;
         }

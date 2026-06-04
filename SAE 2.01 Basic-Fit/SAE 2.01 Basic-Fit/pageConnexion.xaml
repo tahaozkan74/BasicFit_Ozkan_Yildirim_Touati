@@ -13,9 +13,9 @@
                     <Image Height="91" Source="/Image/basic-fit-logo.png" Stretch="Fill" Width="330" Margin="0,12,0,0"/>
                     <TextBlock Text="CONNEXION" FontSize="30" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="0,35,0,0"/>
                     <TextBlock Text="Nom d'utilisateur :" FontSize="15" FontWeight="Bold" Foreground="Black" Width="138" Margin="-286,35,0,0"/>
-                    <TextBox Width="426" Margin="0,25,0,0" Background="#FFD9D9D9" FontSize="16" FontWeight="DemiBold" Height="23" BorderBrush="#FFD9D9D9" />
+                    <TextBox x:Name="txtUser" Width="426" Margin="0,25,0,0" Background="#FFD9D9D9" FontSize="16" FontWeight="DemiBold" Height="23" BorderBrush="#FFD9D9D9" />
                     <TextBlock Text="Mot de passe :" FontSize="15" FontWeight="Bold" Foreground="Black" Width="138" Margin="-286,35,0,0"/>
-                    <PasswordBox Width="426" Margin="0,25,0,0" Background="#FFD9D9D9" FontSize="16" FontWeight="Bold" Height="23" BorderBrush="#FFD9D9D9" PasswordChar="●"/>
+                    <PasswordBox x:Name="txtPassword" Width="426" Margin="0,25,0,0" Background="#FFD9D9D9" FontSize="16" FontWeight="Bold" Height="23" BorderBrush="#FFD9D9D9" PasswordChar="●"/>
                     <Button x:Name="butConnecter" Content="SE CONNECTER" FontSize="15" FontWeight="Bold" Foreground="Black" Height="39" Width="175" Margin="0,40,0,0" Background="#FFFF8C42" BorderBrush="#FFFF8C42" Click="butConnecter_Click" />
                 </StackPanel>
             </Border>

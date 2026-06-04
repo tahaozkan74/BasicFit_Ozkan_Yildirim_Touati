@@ -75,5 +75,26 @@ namespace SAE_2._01_Basic_Fit.Models
             }
             return lesCategories;
         }
+        public int Create()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand(
+                "insert into categorie (categorie_nom, categorie_description) values (@nom, @desc) returning categorie_id;"))
+            {
+                cmd.Parameters.AddWithValue("nom", this.CategorieNom);
+                cmd.Parameters.AddWithValue("desc", this.CategorieDescription);
+                return Convert.ToInt32(DataAccess.ExecuteSelectUneValeur(cmd));
+            }
+        }
+        public int Update()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand(
+                "update categorie set categorie_nom=@nom, categorie_description=@desc where categorie_id=@id;"))
+            {
+                cmd.Parameters.AddWithValue("nom", this.CategorieNom);
+                cmd.Parameters.AddWithValue("desc", this.CategorieDescription);
+                cmd.Parameters.AddWithValue("id", this.CategorieId);
+                return DataAccess.ExecuteSet(cmd);
+            }
+        }
     }
 }

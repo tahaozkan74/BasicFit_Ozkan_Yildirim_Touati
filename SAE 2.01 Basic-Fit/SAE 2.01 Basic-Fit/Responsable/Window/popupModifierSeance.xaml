@@ -37,8 +37,9 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Cours *" FontWeight="Bold" Margin="0,0,0,5"/>
             <TextBlock Grid.Row="0" Grid.Column="2" Text="Entraîneur *" FontWeight="Bold" Margin="0,0,0,5"/>
-            <ComboBox x:Name="cbxCours" Grid.Row="1" Grid.Column="0" Height="28"/>
-            <ComboBox x:Name="cbxEntraineur" Grid.Row="1" Grid.Column="2" Height="28"/>
+            <ComboBox x:Name="cbxCours" Grid.Row="1" Grid.Column="0" Height="28" DisplayMemberPath="CoursNom"/>
+            <ComboBox x:Name="cbxEntraineur" Grid.Row="1" Grid.Column="2" Height="28" DisplayMemberPath="EntraineurPrenom"/>
+            <ComboBox x:Name="cbxSalle" Grid.Row="8" Grid.Column="0" Height="28" DisplayMemberPath="SalleNom"/>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Jour *" FontWeight="Bold" Margin="0,0,0,5"/>
             <TextBlock Grid.Row="3" Grid.Column="2" Text="Heure début *" FontWeight="Bold" Margin="0,0,0,5"/>
@@ -57,7 +58,6 @@
 
             <TextBlock Grid.Row="7" Grid.Column="0" Text="Salle *" FontWeight="Bold" Margin="0,0,0,5"/>
             <TextBlock Grid.Row="7" Grid.Column="2" Text="Nombre de places *" FontWeight="Bold" Margin="0,0,0,5"/>
-            <ComboBox x:Name="cbxSalle" Grid.Row="8" Grid.Column="0" Height="28"/>
             <TextBox x:Name="txtNbPlaces" Grid.Row="8" Grid.Column="2" Text="20" Height="28" Padding="3"/>
         </Grid>
 

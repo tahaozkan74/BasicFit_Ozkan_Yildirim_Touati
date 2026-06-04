@@ -15,6 +15,9 @@ namespace SAE_2._01_Basic_Fit.Models
         private string entraineurNom;
         private string entraineurPrenom;
 
+        public Entraineur()
+        {
+        }
         public Entraineur(int entraineurId, string entraineurNom, string entraineurPrenom)
         {
             EntraineurId = entraineurId;

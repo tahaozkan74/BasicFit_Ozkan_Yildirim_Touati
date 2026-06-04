@@ -35,7 +35,7 @@
         </StackPanel>
 
         <ScrollViewer Margin="0,170,0,0">
-            <ContentControl x:Name="ZoneContenu" Margin="0,18,0,0" Height="616" Width="1230"/>
+            <ContentControl x:Name="ZoneContenu" Margin="0,18,0,0" Height="525" Width="1230"/>
         </ScrollViewer>
     </Grid>
 </UserControl>

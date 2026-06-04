@@ -31,13 +31,59 @@ namespace SAE_2._01_Basic_Fit.Responsable.UCWindow
         private void butNouveauCours_Click(object sender, RoutedEventArgs e)
         {
             popupAjouterCours popup = new popupAjouterCours();
-            popup.ShowDialog();
+            bool? result = popup.ShowDialog();
+
+            if (result == true)
+            {
+                try
+                {
+                    popup.LeCours.CoursId = popup.LeCours.Create(); 
+
+                    
+                    List<Cours> liste = (List<Cours>)dgCours.ItemsSource;
+                    liste.Add(popup.LeCours);
+                    dgCours.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Le cours n'a pas pu être créé.", "Attention",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
-        private void butVoir_Click(object sender, RoutedEventArgs e)
+        private void butModifier_Click(object sender, RoutedEventArgs e)
         {
-            popupModifierCours popup = new popupModifierCours();
-            popup.ShowDialog();
+            Button bouton = (Button)sender;
+            Cours coursSelectionne = (Cours)bouton.DataContext;
+
+            Cours copie = new Cours(
+                coursSelectionne.CoursId,
+                coursSelectionne.CategorieId,
+                coursSelectionne.CoursNom,
+                coursSelectionne.CoursDescription);
+
+            popupModifierCours popup = new popupModifierCours(copie);
+            bool? result = popup.ShowDialog();
+
+            if (result == true)
+            {
+                try
+                {
+                    copie.Update();
+
+                    coursSelectionne.CoursNom = copie.CoursNom;
+                    coursSelectionne.CoursDescription = copie.CoursDescription;
+                    coursSelectionne.CategorieId = copie.CategorieId;
+                    coursSelectionne.Categorie = copie.Categorie;  
+
+                    dgCours.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Le cours n'a pas pu être modifié.", "Attention", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

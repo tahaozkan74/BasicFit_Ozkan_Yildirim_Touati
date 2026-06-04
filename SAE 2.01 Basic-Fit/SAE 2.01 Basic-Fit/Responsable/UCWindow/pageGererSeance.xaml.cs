@@ -31,13 +31,65 @@ namespace SAE_2._01_Basic_Fit.Responsable.UCWindow
         private void butAjouterSeance_Click(object sender, RoutedEventArgs e)
         {
             popupAjouterSeance popup = new popupAjouterSeance();
-            popup.ShowDialog();
+            bool? result = popup.ShowDialog();
+
+            if (result == true)
+            {
+                try
+                {
+                    popup.LaSeance.SeanceId = popup.LaSeance.Create(); 
+
+                    List<Seance> liste = (List<Seance>)dgSeance.ItemsSource;
+                    liste.Add(popup.LaSeance);
+                    dgSeance.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("La séance n'a pas pu être créée.", "Attention", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void butModifier_Click(object sender, RoutedEventArgs e)
         {
-            popupModifierSeance popup = new popupModifierSeance();
-            popup.ShowDialog();
+            Button bouton = (Button)sender;
+            Seance seanceSelectionnee = (Seance)bouton.DataContext;
+
+            Seance copie = new Seance(
+                seanceSelectionnee.SeanceId,
+                seanceSelectionnee.HeureDebut,
+                seanceSelectionnee.HeureFin,
+                seanceSelectionnee.NbPlaces,
+                seanceSelectionnee.Cours,
+                seanceSelectionnee.Salle,
+                seanceSelectionnee.Entraineur);
+            copie.Jour = seanceSelectionnee.Jour;
+
+            popupModifierSeance popup = new popupModifierSeance(copie);
+            bool? result = popup.ShowDialog();
+
+            if (result == true)
+            {
+                try
+                {
+                    copie.Update();
+
+                    seanceSelectionnee.Cours = copie.Cours;
+                    seanceSelectionnee.Salle = copie.Salle;
+                    seanceSelectionnee.Entraineur = copie.Entraineur;
+                    seanceSelectionnee.Jour = copie.Jour;
+                    seanceSelectionnee.HeureDebut = copie.HeureDebut;
+                    seanceSelectionnee.HeureFin = copie.HeureFin;
+                    seanceSelectionnee.NbPlaces = copie.NbPlaces;
+
+                    dgSeance.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("La séance n'a pas pu être modifiée.", "Attention",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

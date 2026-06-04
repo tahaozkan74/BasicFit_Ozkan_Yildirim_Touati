@@ -25,9 +25,7 @@
             <TextBlock Text="Le nom doit être unique." FontSize="11" Foreground="Gray" Margin="0,3,0,15"/>
 
             <TextBlock Text="Catégorie *" FontWeight="Bold" Margin="0,0,0,5"/>
-            <ComboBox x:Name="cbxCategorie" Height="28">
-                <ComboBoxItem Content="-- Sélectionner --" IsSelected="True"/>
-            </ComboBox>
+            <ComboBox x:Name="cbxCategorie" Height="28" DisplayMemberPath="CategorieNom"/>
 
             <TextBlock Text="Description *" FontWeight="Bold" Margin="0,15,0,5"/>
             <TextBox x:Name="txtDescription" Height="120" Padding="5"

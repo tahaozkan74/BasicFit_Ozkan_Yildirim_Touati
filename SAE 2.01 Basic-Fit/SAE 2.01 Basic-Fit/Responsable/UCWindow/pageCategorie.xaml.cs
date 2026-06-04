@@ -31,13 +31,54 @@ namespace SAE_2._01_Basic_Fit.Responsable.UCWindow
         private void butNouvelleCategorie_Click(object sender, RoutedEventArgs e)
         {
             popupAjouterCategorie popup = new popupAjouterCategorie();
-            popup.ShowDialog();
-        }
+            bool? result = popup.ShowDialog();
 
+            if (result == true)
+            {
+                try
+                {
+                    popup.LaCategorie.CategorieId = popup.LaCategorie.Create();  
+
+                    List<Categorie> liste = (List<Categorie>)dgCategorie.ItemsSource;
+                    liste.Add(popup.LaCategorie);
+                    dgCategorie.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("La catégorie n'a pas pu être créée.", "Attention",  MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
         private void butModifier_Click(object sender, RoutedEventArgs e)
         {
-            popupModifierCategorie popup = new popupModifierCategorie();
-            popup.ShowDialog();
+            Button bouton = (Button)sender;
+            Categorie categorieSelectionnee = (Categorie)bouton.DataContext;
+
+            // Copie (on ne modifie pas l'original tant que pas validé)
+            Categorie copie = new Categorie(
+                categorieSelectionnee.CategorieId,
+                categorieSelectionnee.CategorieNom,
+                categorieSelectionnee.CategorieDescription);
+
+            popupModifierCategorie popup = new popupModifierCategorie(copie);
+            bool? result = popup.ShowDialog();
+
+            if (result == true)
+            {
+                try
+                {
+                    copie.Update();  
+
+                    categorieSelectionnee.CategorieNom = copie.CategorieNom;
+                    categorieSelectionnee.CategorieDescription = copie.CategorieDescription;
+
+                    dgCategorie.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("La catégorie n'a pas pu être modifiée.", "Attention", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

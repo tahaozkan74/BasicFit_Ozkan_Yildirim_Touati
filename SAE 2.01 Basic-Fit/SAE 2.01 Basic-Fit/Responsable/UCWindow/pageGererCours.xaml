@@ -65,7 +65,7 @@
                         <DataGridTemplateColumn Header="Action" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="butVoir" Content="Voir" Background="#FFF37F08" Foreground="White" FontWeight="Bold" BorderThickness="0" Padding="15,5" Margin="5" Cursor="Hand" Click="butVoir_Click"/>
+                                    <Button Content="Modifier" Background="#FFF37F08" Foreground="White" FontWeight="Bold" BorderThickness="0" Padding="15,5" Margin="5" Cursor="Hand" Click="butModifier_Click"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>

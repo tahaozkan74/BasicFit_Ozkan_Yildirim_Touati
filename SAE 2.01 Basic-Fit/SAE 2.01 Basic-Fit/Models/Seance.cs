@@ -109,5 +109,38 @@ namespace SAE_2._01_Basic_Fit.Models
             return lesSeances;
         }
         public string Horaire => $"{heureDebut:HH\\:mm} - {HeureFin:HH\\:mm}";
+
+        public int Update()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand(
+                "update seance set cours_id=@coursId, entraineur_id=@entId, salle_id=@salleId, jour=@jour, heure_debut=@hDebut, heure_fin=@hFin, nb_places=@nbP where seance_id=@id;"))
+            {
+                cmd.Parameters.AddWithValue("coursId", this.Cours.CoursId);
+                cmd.Parameters.AddWithValue("entId", this.Entraineur.EntraineurId);
+                cmd.Parameters.AddWithValue("salleId", this.Salle.SalleId);
+                cmd.Parameters.AddWithValue("jour", this.Jour);
+                cmd.Parameters.AddWithValue("hDebut", this.HeureDebut);
+                cmd.Parameters.AddWithValue("hFin", this.HeureFin);
+                cmd.Parameters.AddWithValue("nbP", this.NbPlaces);
+                cmd.Parameters.AddWithValue("id", this.SeanceId);
+                return DataAccess.ExecuteSet(cmd);
+            }
+        }
+
+        public int Create()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand(
+                "insert into seance (cours_id, entraineur_id, salle_id, jour, heure_debut, heure_fin, nb_places) values (@coursId, @entId, @salleId, @jour, @hDebut, @hFin, @nbP) returning seance_id;"))
+            {
+                cmd.Parameters.AddWithValue("coursId", this.Cours.CoursId);
+                cmd.Parameters.AddWithValue("entId", this.Entraineur.EntraineurId);
+                cmd.Parameters.AddWithValue("salleId", this.Salle.SalleId);
+                cmd.Parameters.AddWithValue("jour", this.Jour);
+                cmd.Parameters.AddWithValue("hDebut", this.HeureDebut);
+                cmd.Parameters.AddWithValue("hFin", this.HeureFin);
+                cmd.Parameters.AddWithValue("nbP", this.NbPlaces);
+                return Convert.ToInt32(DataAccess.ExecuteSelectUneValeur(cmd));
+            }
+        }
     }
 }
