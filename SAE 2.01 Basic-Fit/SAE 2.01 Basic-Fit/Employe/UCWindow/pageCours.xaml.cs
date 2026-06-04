@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAE_2._01_Basic_Fit.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
         public pageCours()
         {
             InitializeComponent();
+            dgCours.ItemsSource = new Seance().FindAll();
         }
     }
 }

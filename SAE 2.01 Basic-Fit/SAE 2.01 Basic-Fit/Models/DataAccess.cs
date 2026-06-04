@@ -1,49 +1,33 @@
-
-
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows;
 using Microsoft.Extensions.Logging;
 using Npgsql;
 
-
 namespace SAE201.Models
 {
-
-    public  class DataAccess
+    public class DataAccess
     {
-        private static readonly DataAccess instance = new DataAccess();
+        private static readonly string connectionString;
+        private static NpgsqlConnection connection;
 
-        private readonly string connectionString = "Host=srv-peda-new;Port=5433;Username=ozkant;Password=;Database=;Options='-c search_path=ozkant'";
-
-        private NpgsqlConnection connection;
-
-        public static DataAccess Instance   
+        static DataAccess()
         {
-            get
-            {
-                return instance;
-            }
-        }
-
-        //  Constructeur privé pour empêcher l'instanciation multiple
-        private DataAccess()
-        {
-            
+            connectionString = "Host=localhost;Port=5432;Username=postgres;Password=taha;Database=tpapp";
             try
             {
                 connection = new NpgsqlConnection(connectionString);
             }
             catch (Exception ex)
             {
-                LogError.Log(ex, "Pb de connexion GetConnection \n" + connectionString);
+                LogError.Log(ex, "Pb à la connexion  \n");
                 throw;
             }
         }
 
-
         // pour récupérer la connexion (et l'ouvrir si nécessaire)
-        public NpgsqlConnection GetConnection()
+        public static NpgsqlConnection GetConnection()
         {
             if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
             {
@@ -54,16 +38,15 @@ namespace SAE201.Models
                 catch (Exception ex)
                 {
                     LogError.Log(ex, "Pb de connexion GetConnection \n" + connectionString);
-                    throw;                
+                    throw;
                 }
             }
 
-        
             return connection;
         }
 
         //  pour requêtes SELECT et retourne un DataTable ( table de données en mémoire)
-        public DataTable ExecuteSelect(NpgsqlCommand cmd)
+        public static DataTable ExecuteSelect(NpgsqlCommand cmd)
         {
             DataTable dataTable = new DataTable();
             try
@@ -83,27 +66,24 @@ namespace SAE201.Models
         }
 
         //   pour requêtes INSERT et renvoie l'ID généré
-
-        public int ExecuteInsert(NpgsqlCommand cmd)
+        public static int ExecuteInsert(NpgsqlCommand cmd)
         {
             int nb = 0;
             try
             {
                 cmd.Connection = GetConnection();
                 nb = (int)cmd.ExecuteScalar();
-
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
                 LogError.Log(ex, "Pb avec une requete insert " + cmd.CommandText);
-                throw; }
+                throw;
+            }
             return nb;
         }
 
-
-
-
         //  pour requêtes UPDATE, DELETE
-        public int ExecuteSet(NpgsqlCommand cmd)
+        public static int ExecuteSet(NpgsqlCommand cmd)
         {
             int nb = 0;
             try
@@ -111,16 +91,16 @@ namespace SAE201.Models
                 cmd.Connection = GetConnection();
                 nb = cmd.ExecuteNonQuery();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 LogError.Log(ex, "Pb avec une requete set " + cmd.CommandText);
                 throw;
             }
             return nb;
-
         }
 
         // pour requêtes avec une seule valeur retour  (ex : COUNT, SUM) 
-        public object ExecuteSelectUneValeur(NpgsqlCommand cmd)
+        public static object ExecuteSelectUneValeur(NpgsqlCommand cmd)
         {
             object res = null;
             try
@@ -128,16 +108,16 @@ namespace SAE201.Models
                 cmd.Connection = GetConnection();
                 res = cmd.ExecuteScalar();
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
                 LogError.Log(ex, "Pb avec une requete select " + cmd.CommandText);
                 throw;
             }
             return res;
-
         }
 
         //  Fermer la connexion 
-        public void CloseConnection()
+        public static void CloseConnection()
         {
             if (connection.State == ConnectionState.Open)
             {
@@ -146,6 +126,3 @@ namespace SAE201.Models
         }
     }
 }
-
-
-

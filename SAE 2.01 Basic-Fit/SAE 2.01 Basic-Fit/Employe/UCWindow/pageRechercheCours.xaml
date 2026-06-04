@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="SAE_2._01_Basic_Fit.Employe.UCWindow.pageRechercheCours"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAE_2._01_Basic_Fit.Employe.UCWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFFF8C42">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="White" Margin="50,20,50,0" Padding="10" CornerRadius="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Catégorie" FontSize="13" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="filtreCours" Width="120" Height="22" Background="#FFD9D9D9" BorderBrush="#FFD9D9D9" FontSize="14" Margin="5,0,20,0" VerticalContentAlignment="Center" TextChanged="filtreCours_TextChanged"/>
+                <TextBlock Text="Jour" FontSize="13" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="filtreJour" Width="120" Height="22" Background="#FFD9D9D9" BorderBrush="#FFD9D9D9" FontSize="14" Margin="5,0,20,0" VerticalContentAlignment="Center"/>
+                <TextBlock Text="Horaire" FontSize="13" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+                <TextBox x:Name="filtreHoraire" Width="120" Height="22" Background="#FFD9D9D9" BorderBrush="#FFD9D9D9" FontSize="14" Margin="5,0,0,0" VerticalContentAlignment="Center" TextChanged="filtreHoraire_TextChanged"/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" BorderThickness="1" Margin="50,10,50,20" Background="White" CornerRadius="10,10,10,10">
+            <DataGrid x:Name="dgRechercheCours"
+                      ItemsSource="{Binding Seance}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      HeadersVisibility="Column"
+                      GridLinesVisibility="Horizontal"
+                      HorizontalGridLinesBrush="#FFEEEEEE"
+                      BorderThickness="0"
+                      Background="White"
+                      RowBackground="White"
+                      AlternatingRowBackground="#FFFAFAFA"
+                      RowHeight="40"
+                      FontSize="14"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="9,9,9,0">
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="FontSize" Value="15"/>
+                        <Setter Property="Padding" Value="10,8"/>
+                        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+                        <Setter Property="BorderBrush" Value="#FFDDDDDD"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Padding" Value="10,0"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Horaire" Binding="{Binding Horaire}" Width="*"/>
+                    <DataGridTextColumn Header="Cours" Binding="{Binding Cours.CoursNom}" Width="*"/>
+                    <DataGridTextColumn Header="Salle" Binding="{Binding Salle.SalleNom}" Width="*"/>
+                    <DataGridTextColumn Header="Entraîneur" Binding="{Binding Entraineur.EntraineurPrenom}" Width="*"/>
+                    <DataGridTextColumn Header="Inscrit" Binding="{Binding NbPlaces}" Width="*"/>
+                    <DataGridTemplateColumn Header="Statut" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Inscrire" Background="#FF4CAF50" Foreground="White" FontWeight="Bold" BorderThickness="0" Padding="15,5" Margin="5" Cursor="Hand"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</UserControl>

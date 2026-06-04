@@ -93,3 +93,7 @@ C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Deb
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Responsable\UCWindow\pagePrincipal.baml
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageCours.g.cs
 C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageCours.baml
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageRechercheCours.g.cs
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageRechercheCours.baml
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageParticipant.g.cs
+C:\Users\tozka\Desktop\Application\SAE 2.01 Basic-Fit\SAE 2.01 Basic-Fit\obj\Debug\net8.0-windows\Employe\UCWindow\pageParticipant.baml

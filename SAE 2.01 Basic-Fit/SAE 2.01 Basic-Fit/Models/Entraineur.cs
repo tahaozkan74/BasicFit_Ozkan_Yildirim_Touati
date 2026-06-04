@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Npgsql;
+using SAE201.Models;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +14,13 @@ namespace SAE_2._01_Basic_Fit.Models
         private int entraineurId;
         private string entraineurNom;
         private string entraineurPrenom;
-        private List<Seance> seances;
+
+        public Entraineur(int entraineurId, string entraineurNom, string entraineurPrenom)
+        {
+            EntraineurId = entraineurId;
+            EntraineurNom = entraineurNom;
+            EntraineurPrenom = entraineurPrenom;
+        }
 
         public int EntraineurId 
         {
@@ -28,10 +37,20 @@ namespace SAE_2._01_Basic_Fit.Models
             get => entraineurPrenom;
             set => entraineurPrenom = value; 
         }
-        public List<Seance> Seances
+
+        public List<Entraineur> FindAll()
         {
-            get => seances; 
-            set => seances = value; 
+            List<Entraineur> lesEntraineur = new List<Entraineur>();
+            using (NpgsqlCommand cmd = new NpgsqlCommand("select * from entraineur;"))
+            {
+                DataTable dt = DataAccess.ExecuteSelect(cmd);
+                foreach (DataRow dr in dt.Rows)
+                    lesEntraineur.Add(new Entraineur(
+                    (int)dr["entraineur_id"],
+                    (string)dr["entraineur_nom"],
+                    (string)dr["entraineur_prenom"]));
+            }
+            return lesEntraineur;
         }
     }
 }

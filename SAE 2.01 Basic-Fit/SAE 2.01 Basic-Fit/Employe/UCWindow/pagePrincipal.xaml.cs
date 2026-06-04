@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace SAE_2._01_Basic_Fit.Employe.UCWindow
 {
-    /// <summary>
-    /// Logique d'interaction pour pagePrincipal.xaml
-    /// </summary>
+ 
     public partial class pagePrincipal : UserControl
     {
         public pagePrincipal()
@@ -28,6 +26,16 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
         private void butCoursJour_Click(object sender, RoutedEventArgs e)
         {
             ZoneContenu.Content = new pageCours();
+        }
+
+        private void butRechercheCours_Click(object sender, RoutedEventArgs e)
+        {
+            ZoneContenu.Content = new pageRechercheCours();
+        }
+
+        private void butParticipant_Click(object sender, RoutedEventArgs e)
+        {
+            ZoneContenu.Content = new pageParticipant();
         }
     }
 }

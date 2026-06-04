@@ -5,7 +5,13 @@
     <Compile Update="Employe\UCWindow\pageCours.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Employe\UCWindow\pageParticipant.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Employe\UCWindow\pagePrincipal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Employe\UCWindow\pageRechercheCours.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pageConnexion.xaml.cs">
