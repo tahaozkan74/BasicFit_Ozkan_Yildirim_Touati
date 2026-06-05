@@ -9,12 +9,32 @@ namespace SAE201.Models
 {
     public class DataAccess
     {
-        private static readonly string connectionString;
+        private static string connectionString;
         private static NpgsqlConnection connection;
 
+        public static bool TesterConnexion(string username, string password)
+        {
+            string nouvelleChaine = $"Host=localhost;Port=5432;Username={username};Password={password};Database=ozkant_basicfit;Options='-c search_path=s201'";
+            try
+            {
+                using (NpgsqlConnection testCo = new NpgsqlConnection(nouvelleChaine))
+                {
+                    testCo.Open();
+                }
+                CloseConnection();
+                connectionString = nouvelleChaine;
+                connection = new NpgsqlConnection(connectionString);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                LogError.Log(ex, "Echec connexion utilisateur " + username);
+                return false;
+            }
+        }
         static DataAccess()
         {
-            connectionString = "Host=localhost;Port=5432;Username=postgres;Password=taha;Database=tpapp";
+            connectionString = "Host=srv-peda-new;Port=5433;Username=ozkant;Password=Oxto08;Database=ozkant_basicfit;Options='-c search_path=s201'"; 
             try
             {
                 connection = new NpgsqlConnection(connectionString);

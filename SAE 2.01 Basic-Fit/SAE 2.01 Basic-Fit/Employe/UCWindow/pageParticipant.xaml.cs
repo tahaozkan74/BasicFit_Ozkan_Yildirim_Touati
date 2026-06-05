@@ -59,9 +59,26 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
         private void butNouveauParticipant_Click(object sender, RoutedEventArgs e)
         {
             popupCreerParticipant popup = new popupCreerParticipant();
-            popup.ShowDialog();
+            bool? result = popup.ShowDialog();
+
+            if (result == true)
+            {
+                try
+                {
+                    popup.LeClient.ClientId = popup.LeClient.Create();
+
+                    List<Client> liste = (List<Client>)dgClient.ItemsSource;
+                    liste.Add(popup.LeClient);
+                    dgClient.Items.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Le participant n'a pas pu être créé.", "Attention",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
-       
+
     }
 }

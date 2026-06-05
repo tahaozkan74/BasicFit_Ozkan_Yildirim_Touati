@@ -31,7 +31,10 @@ namespace SAE_2._01_Basic_Fit.Employe.UCWindow
 
         private void butDetailCours_Click(object sender, RoutedEventArgs e)
         {
-            popupDetailCours popup = new popupDetailCours();
+            Button bouton = (Button)sender;
+            Seance seanceSelectionnee = (Seance)bouton.DataContext;
+
+            popupDetailCours popup = new popupDetailCours(seanceSelectionnee);
             popup.ShowDialog();
         }
     }

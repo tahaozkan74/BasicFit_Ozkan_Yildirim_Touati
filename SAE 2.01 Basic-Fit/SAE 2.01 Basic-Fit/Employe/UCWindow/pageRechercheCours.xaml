@@ -65,7 +65,7 @@
                     <DataGridTextColumn Header="Cours" Binding="{Binding Cours.CoursNom}" Width="*"/>
                     <DataGridTextColumn Header="Salle" Binding="{Binding Salle.SalleNom}" Width="*"/>
                     <DataGridTextColumn Header="Entraîneur" Binding="{Binding Entraineur.EntraineurPrenom}" Width="*"/>
-                    <DataGridTextColumn Header="Inscrit" Binding="{Binding NbPlaces}" Width="*"/>
+                    <DataGridTextColumn Header="Inscrit" Binding="{Binding Inscrits}" Width="*"/>
                     <DataGridTemplateColumn Header="Statut" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

@@ -22,25 +22,34 @@
         <StackPanel Grid.Row="1" Margin="0,0,0,15">
             <StackPanel Orientation="Horizontal" Margin="0,3">
                 <TextBlock Text="Catégorie : " FontWeight="Bold"/>
-                <TextBlock x:Name="txtCategorie" Text="Cardio &amp; Endurance"/>
+                <TextBlock x:Name="txtCategorie" Text="" Width="402"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,3">
                 <TextBlock Text="Description : " FontWeight="Bold"/>
                 <TextBlock x:Name="txtDescription" 
-                           Text="Entraînement cardio dynamique pour améliorer l'endurance."
-                           TextWrapping="Wrap" MaxWidth="450"/>
+                           Text=""
+                           TextWrapping="Wrap" MaxWidth="450" Width="410"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,3">
                 <TextBlock Text="Salle : " FontWeight="Bold"/>
-                <TextBlock x:Name="txtSalle" Text="Salle Énergie"/>
+                <TextBlock x:Name="txtSalle" Text="" Width="201"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,3">
                 <TextBlock Text="Entraîneur : " FontWeight="Bold"/>
-                <TextBlock x:Name="txtEntraineur" Text="Emma"/>
+                <TextBlock x:Name="txtEntraineur" Text="" RenderTransformOrigin="0.5,0.5" Width="158">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.126"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,3">
                 <TextBlock Text="Places : " FontWeight="Bold"/>
-                <TextBlock x:Name="txtPlaces" Text="3 / 20"/>
+                <TextBlock x:Name="txtPlaces" Text="" Background="White" Width="91"/>
             </StackPanel>
         </StackPanel>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAE201.Models;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -16,22 +17,32 @@ namespace SAE_2._01_Basic_Fit
             string username = txtUser.Text.Trim();
             string password = txtPassword.Password;
 
-            if (username == "ozkant" && password == "Oxto08")
+            // On teste la connexion PostgreSQL avec ces identifiants
+            if (DataAccess.TesterConnexion(username, password))
             {
-                this.Content = new Employe.UCWindow.pagePrincipal();
-
-                this.Height = 750;
-                this.Width = 1250;
-            }
-            else if (username == "yildirfa" && password == "le4pUV")
-            {
-                this.Content = new Responsable.UCWindow.pagePrincipal();
-                this.Height = 750;
-                this.Width = 1250;
+                // Connexion OK : on détermine l'espace selon l'utilisateur
+                if (username == "ozkant")
+                {
+                    this.Content = new Employe.UCWindow.pagePrincipal();
+                    this.Height = 750;
+                    this.Width = 1250;
+                }
+                else if (username == "yildirfa")
+                {
+                    this.Content = new Responsable.UCWindow.pagePrincipal();
+                    this.Height = 750;
+                    this.Width = 1250;
+                }
+                else
+                {
+                    MessageBox.Show("Utilisateur inconnu.", "Connexion",
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.", "Connexion échouée", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.",
+                    "Connexion échouée", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

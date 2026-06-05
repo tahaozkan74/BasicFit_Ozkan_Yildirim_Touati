@@ -104,5 +104,53 @@ namespace SAE_2._01_Basic_Fit.Models
             }
             
         }
+
+        public List<Client> FindParticipants(int seanceId)
+        {
+            List<Client> lesClients = new List<Client>();
+            string sql = @"SELECT c.client_id, c.nom, c.prenom, c.mail, c.telephone, c.date_naissance,
+                          c.adresse, c.code_postal, c.ville
+                   FROM client c
+                   JOIN inscription i ON i.client_id = c.client_id
+                   WHERE i.seance_id = @seanceId
+                   ORDER BY c.nom;";
+            using (NpgsqlCommand cmd = new NpgsqlCommand(sql))
+            {
+                cmd.Parameters.AddWithValue("seanceId", seanceId);
+                DataTable dt = DataAccess.ExecuteSelect(cmd);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    lesClients.Add(new Client(
+                        (int)dr["client_id"],
+                        null,
+                        (string)dr["nom"],
+                        (string)dr["prenom"],
+                        (string)dr["mail"],
+                        (string)dr["telephone"],
+                        (DateOnly)dr["date_naissance"],
+                        dr["adresse"] == DBNull.Value ? "" : (string)dr["adresse"],
+                        dr["code_postal"] == DBNull.Value ? "" : (string)dr["code_postal"],
+                        dr["ville"] == DBNull.Value ? "" : (string)dr["ville"]));
+                }
+            }
+            return lesClients;
+        }
+
+        public int Create()
+        {
+            using (NpgsqlCommand cmd = new NpgsqlCommand(
+                "insert into client (nom, prenom, mail, telephone, date_naissance, adresse, code_postal, ville) values (@nom, @prenom, @mail, @tel, @dateN, @adr, @cp, @ville) returning client_id;"))
+            {
+                cmd.Parameters.AddWithValue("nom", this.Nom);
+                cmd.Parameters.AddWithValue("prenom", this.Prenom);
+                cmd.Parameters.AddWithValue("mail", this.Mail);
+                cmd.Parameters.AddWithValue("tel", this.Telephone);
+                cmd.Parameters.AddWithValue("dateN", this.DateNaissance);
+                cmd.Parameters.AddWithValue("adr", this.Adresse);
+                cmd.Parameters.AddWithValue("cp", this.CodePostal);
+                cmd.Parameters.AddWithValue("ville", this.Ville);
+                return Convert.ToInt32(DataAccess.ExecuteSelectUneValeur(cmd));
+            }
+        }
     }       
 }

@@ -18,6 +18,10 @@ namespace SAE_2._01_Basic_Fit.Models
         private Salle salle;
         private Entraineur entraineur;
         private int jour;
+
+        private int nbInscrits;
+        public int NbInscrits { get => nbInscrits; set => nbInscrits = value; }
+        public string Inscrits => $"{NbInscrits}/{NbPlaces}";
         public Seance() { }
         public Seance(int seanceId, TimeOnly heureDebut, TimeOnly heureFin, int nbPlaces, Cours cours, Salle salle, Entraineur entraineur)
         {
@@ -49,29 +53,51 @@ namespace SAE_2._01_Basic_Fit.Models
         {
             List<Seance> lesSeances = new List<Seance>();
             string sql = @"SELECT s.seance_id, s.heure_debut, s.heure_fin, s.nb_places,
-                                  c.cours_id, c.cours_nom,
-                                  sa.salle_id, sa.salle_nom,
-                                  e.entraineur_id, e.entraineur_nom, e.entraineur_prenom
-                           FROM seance s
-                           JOIN cours c       ON s.cours_id = c.cours_id
-                           JOIN salle sa      ON s.salle_id = sa.salle_id
-                           JOIN entraineur e  ON s.entraineur_id = e.entraineur_id
-                           WHERE s.jour = 1
-                           ORDER BY s.heure_debut;";
+                  c.cours_id, c.cours_nom, c.cours_description,
+                  cat.categorie_id, cat.categorie_nom, cat.categorie_description,
+                  sa.salle_id, sa.salle_nom,
+                  e.entraineur_id, e.entraineur_nom, e.entraineur_prenom,
+                  COUNT(i.client_id) AS nb_inscrits
+           FROM seance s
+           JOIN cours c       ON s.cours_id = c.cours_id
+           JOIN categorie cat ON c.categorie_id = cat.categorie_id
+           JOIN salle sa      ON s.salle_id = sa.salle_id
+           JOIN entraineur e  ON s.entraineur_id = e.entraineur_id
+           LEFT JOIN inscription i ON i.seance_id = s.seance_id
+           WHERE s.jour = 1
+           GROUP BY s.seance_id, s.heure_debut, s.heure_fin, s.nb_places,
+                    c.cours_id, c.cours_nom, c.cours_description,
+                    cat.categorie_id, cat.categorie_nom, cat.categorie_description,
+                    sa.salle_id, sa.salle_nom,
+                    e.entraineur_id, e.entraineur_nom, e.entraineur_prenom
+           ORDER BY s.heure_debut;";
             using (NpgsqlCommand cmd = new NpgsqlCommand(sql))
             {
                 DataTable dt = DataAccess.ExecuteSelect(cmd);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    Cours c = new Cours((int)dr["cours_id"], 0, (string)dr["cours_nom"], "");
+                    Cours c = new Cours(
+                        (int)dr["cours_id"],
+                        (int)dr["categorie_id"],
+                        (string)dr["cours_nom"],
+                        (string)dr["cours_description"]);
+                    c.Categorie = new Categorie(
+                        (int)dr["categorie_id"],
+                        (string)dr["categorie_nom"],
+                        (string)dr["categorie_description"]);
+
                     Salle sa = new Salle((int)dr["salle_id"], (string)dr["salle_nom"], 0);
                     Entraineur e = new Entraineur((int)dr["entraineur_id"], (string)dr["entraineur_nom"], (string)dr["entraineur_prenom"]);
-                    lesSeances.Add(new Seance(
+
+                    Seance se = new Seance(
                         (int)dr["seance_id"],
                         (TimeOnly)dr["heure_debut"],
                         (TimeOnly)dr["heure_fin"],
                         (int)dr["nb_places"],
-                        c, sa, e));
+                        c, sa, e);
+                    se.NbInscrits = Convert.ToInt32(dr["nb_inscrits"]);
+
+                    lesSeances.Add(se);
                 }
             }
             return lesSeances;

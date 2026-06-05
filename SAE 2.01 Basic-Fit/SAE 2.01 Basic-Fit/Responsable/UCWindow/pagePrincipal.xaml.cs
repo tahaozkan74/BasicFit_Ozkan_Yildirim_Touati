@@ -40,5 +40,11 @@ namespace SAE_2._01_Basic_Fit.Responsable.UCWindow
         {
             ZoneContenu.Content = new pageCategorie();
         }
+
+        private void butLogout_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Window fenetre = System.Windows.Window.GetWindow(this);
+            fenetre.Close();
+        }
     }
 }

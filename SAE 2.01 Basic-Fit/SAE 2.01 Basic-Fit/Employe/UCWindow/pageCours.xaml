@@ -51,8 +51,8 @@
                         <DataGridTextColumn Header="Cours" Binding="{Binding Cours.CoursNom}" Width="*"/>
                         <DataGridTextColumn Header="Salle" Binding="{Binding Salle.SalleNom}" Width="*"/>
                         <DataGridTextColumn Header="Entraîneur" Binding="{Binding Entraineur.EntraineurPrenom}" Width="*"/>
-                        <DataGridTextColumn Header="Inscrit" Binding="{Binding NbPlaces}" Width="*"/>
-                        <DataGridTemplateColumn Header="Statut" Width="*">
+                        <DataGridTextColumn Header="Inscrit" Binding="{Binding Inscrits}" Width="*"/>
+                        <DataGridTemplateColumn Header="Detail Cours" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button x:Name="butDetailCours" Content="Voir" Background="#FF4CAF50" Foreground="White" FontWeight="Bold" BorderThickness="0" Padding="15,5" Margin="5" Cursor="Hand" Click="butDetailCours_Click"/>
