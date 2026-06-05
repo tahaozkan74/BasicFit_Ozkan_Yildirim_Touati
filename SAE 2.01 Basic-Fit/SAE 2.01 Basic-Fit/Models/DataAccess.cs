@@ -14,7 +14,7 @@ namespace SAE201.Models
 
         public static bool TesterConnexion(string username, string password)
         {
-            string nouvelleChaine = $"Host=localhost;Port=5432;Username={username};Password={password};Database=ozkant_basicfit;Options='-c search_path=s201'";
+            string nouvelleChaine = $"Host=srv-peda-new;Port=5433;Username={username};Password={password};Database=ozkant_basicfit;Options='-c search_path=s201'";
             try
             {
                 using (NpgsqlConnection testCo = new NpgsqlConnection(nouvelleChaine))
