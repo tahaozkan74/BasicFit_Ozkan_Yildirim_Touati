@@ -23,11 +23,26 @@
                     <Button x:Name="butParticipant" Content="🙋 Participant" FontSize="30" FontWeight="Bold" Foreground="Black" Width="224" Height="56" Margin="-950,110,0,0" BorderBrush="White" Background="White" Click="butParticipant_Click" />
                 </StackPanel>
             </Border>
-
         </StackPanel>
 
         <ScrollViewer Margin="0,170,0,0">
-            <ContentControl x:Name="ZoneContenu" Margin="0,18,0,0" Height="616" Width="1230"/>
-        </ScrollViewer> 
+            <ContentControl x:Name="ZoneContenu" Margin="0,18,0,0" Height="616" Width="1230">
+                <Border Width="620" Height="260"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Background="White" CornerRadius="20" Padding="40">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#33000000" BlurRadius="25" ShadowDepth="0"/>
+                    </Border.Effect>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" FontSize="42" FontWeight="Bold" Foreground="#FF222222">
+                            <Run Text="👋 BIENVENUE "/>
+                        </TextBlock>
+                        <TextBlock Text="Choisissez une action dans le menu ci-dessus."
+                                   HorizontalAlignment="Center" Margin="0,18,0,0"
+                                   FontSize="18" Foreground="#FF888888"/>
+                    </StackPanel>
+                </Border>
+            </ContentControl>
+        </ScrollViewer>
     </Grid>
 </UserControl>

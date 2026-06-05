@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAE 2.01 Basic-Fit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f6c663ecc8c1a30a0b7d694f63ae0cc07c31fbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78d49d0f7baf65a87085096fa8780ece6dd8a9bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAE 2.01 Basic-Fit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAE 2.01 Basic-Fit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
